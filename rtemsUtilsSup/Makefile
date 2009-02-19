@@ -39,8 +39,7 @@ rtemsUtilsSup_SRCS += rtemsUtilsSupMain.cpp
 # RTEMS Capture Engine
 rtemsUtilsSup_SRCS += spy.cpp
 
-# Finally link to the EPICS Base libraries
-#rtemsUtilsSup_LIBS += $(EPICS_BASE_IOC_LIBS)
+# Finally link to the rtemsCom
 rtemsUtilsSup_LIBS += rtemsCom
 
 #=======================================
