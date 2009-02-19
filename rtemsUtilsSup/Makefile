@@ -26,6 +26,7 @@ PROD_IOC_RTEMS += rtemsUtilsSup
 
 # rtemsUtilsSup.dbd will be created and installed
 rtemsUtilsSup_DBD += spy.dbd
+DBD += rtemsUtilsSup.dbd
 
 # rtemsUtilsSup_registerRecordDeviceDriver.cpp derives from 
 # rtemsUtilsSup.dbd
