@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+       "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <title>Spy Command Support</title>
+  <meta name="generator" content="amaya 8.6, see http://www.w3.org/Amaya/" />
+</head>
+
+<body>
+<h1>Adding the spy command to an RTEMS/EPICS application</h1>
+
+<p>Several files need minor modifications to add the spy command to an
+application.</p>
+<ol>
+  <li>Add the full path to the RTEMS utilities support directory to the
+    application <tt>configure/RELEASE</tt> file:<br />
+    <tt>RTEMS_UTILS=</tt><em>xxxx</em><tt>/modules/soft/rtemsutils-&lt;release&gt;</tt><br
+    />
+    Where <tt>&lt;release&gt;</tt> is the release number of of the RTEMS
+    utility support.</li>
+  <li>Add spy support to application database definition file<br />
+    The application database definition file must include the database
+    definition files for the spy support. There are two ways that this can be
+    done:
+    <ul>
+      <li>If you are building your application database definition file from
+        an <em>xxx</em><tt>Include.dbd</tt> file you include the additional
+        database definition file in that file:<br />
+        <tt>include "base.dbd"</tt><br />
+        <tt>include "spy.dbd"</tt><br />
+      </li>
+      <li>If you are building your application database definition file from
+        the application Makefile you specify the aditional database
+        definition file there:<br />
+        <em>xxx</em><tt>_DBD += base.dbd</tt><br />
+        <em>xxx</em><tt>_DBD += spy.dbd</tt><br />
+      </li>
+    </ul>
+  </li>
+  <li>Add the RTEMS utility support libraries to the application<br />
+    You must link the RTEMS utility support library with the application. Add
+    the following line: <br />
+    <em>xxx</em><tt>_LIBS += rtemsutils</tt><br />
+    before the <br />
+    <em>xxx</em><tt>_LIBS += $(EPICS_BASE_IOC_LIBS)</tt><br />
+    in the application Makefile.</li>
+</ol>
+
+<p>Note that the task priority column is the RTEMS priority, not the EPICS
+priority, of the task. 
+<h1>Installation and Building</h1>
+After obtaining a copy of the distribution, it must be installed and built
+for use at your site. <ol>
+  <li>Place the distribution file into the <tt>modules/soft</tt> directory.</li>
+  <li>Execute the following commands:<br />
+    <tt>cd modules/soft</tt><br />
+    <tt>gunzip rtemsutils-&lt;release&gt;.tar.gz</tt><br />
+    <tt>tar xf rtemsutils-&lt;release&gt;.tar</tt><br />
+    <tt>cd rtemsutils-&lt;release&gt;</tt><br />
+    Where <tt>&lt;release&gt;</tt> is the release number of of the RTEMS
+    utility support.</li>
+  <li>Edit the <tt>configure/RELEASE</tt> file and set the path to your
+    installation of EPICS base.</li>
+  <li>Execute <tt>make</tt> in the top level directory.</li>
+</ol>
+</p>
+</body>
+</html>
