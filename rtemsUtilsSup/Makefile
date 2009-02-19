@@ -32,9 +32,6 @@ DBD += rtemsUtilsSup.dbd
 # rtemsUtilsSup.dbd
 rtemsUtilsSup_SRCS += rtemsUtilsSup_registerRecordDeviceDriver.cpp
 
-# Build the main IOC entry point on workstation OSs.
-rtemsUtilsSup_SRCS += rtemsUtilsSupMain.cpp
-
 # Compile in the RTEMS Spy utility based on the
 # RTEMS Capture Engine
 rtemsUtilsSup_SRCS += spy.cpp
