@@ -40,7 +40,8 @@ rtemsUtilsSup_SRCS += rtemsUtilsSupMain.cpp
 rtemsUtilsSup_SRCS += spy.cpp
 
 # Finally link to the EPICS Base libraries
-rtemsUtilsSup_LIBS += $(EPICS_BASE_IOC_LIBS)
+#rtemsUtilsSup_LIBS += $(EPICS_BASE_IOC_LIBS)
+rtemsUtilsSup_LIBS += rtemsCom
 
 #=======================================
 include $(TOP)/configure/RULES
