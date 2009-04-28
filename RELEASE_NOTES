@@ -1,5 +1,29 @@
+#==============================================================
+#
+#  Name: RELEASE_NOTES
+#
+#  Rem: This files describes release notes for
+#       the rtemsutils support.
+#
+#  Side: Initial Release from Argonne National Labs
+#         modified to work at LCLS.
+#
+#  Auth: dd-mmm-yyyy, Author's Name      (USERNAME)
+#  Rev:  dd-mmm-yyyy, Reviewer's Name    (USERNAME)
+#--------------------------------------------------------------
+#  Mod:
+#        28-Aug-2009, K. Luchini         (LUCHINI):
+#           release rtemsutils-R2-0-0
+#
+#==============================================================
+#
+rtemsutils-R1-0-0-lcls1: Built with rtems-4.9.1 
+                         Built with epics-r3.14.8.2
 
-# Initial Release from Argonne National Labs modified to work
-# at LCLS
+
+
+
+
+
 
 
