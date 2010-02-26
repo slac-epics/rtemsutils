@@ -17,6 +17,9 @@
 #
 #==============================================================
 #
+rtemsutils-R1-0-0-lcls2:  Built against rtems 4.9.3 and EPICS BASE:
+                          base-R3-14-8-2-lcls5
+
 rtemsutils-R1-0-0-lcls1: Built with rtems-4.9.1 
                          Built with epics-r3.14.8.2
 
