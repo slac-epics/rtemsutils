@@ -12,11 +12,16 @@
 #  Rev:  dd-mmm-yyyy, Reviewer's Name    (USERNAME)
 #--------------------------------------------------------------
 #  Mod:
+#        20-Mar-2010, S. Hoobler         (SONYA):
+#           release rtemsutils-R1-0-0-lcls4
 #        28-Aug-2009, K. Luchini         (LUCHINI):
 #           release rtemsutils-R2-0-0
 #
 #==============================================================
 #
+rtemsutils-R1-0-0-lcls4:  Built against rtems 4.9.4 and EPICS BASE:
+                          base-R3-14-8-2-lcls6
+
 rtemsutils-R1-0-0-lcls3:  Built against rtems 4.9.3 and EPICS BASE:
                           base-R3-14-8-2-lcls5
 
