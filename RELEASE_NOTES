@@ -19,6 +19,8 @@
 #
 #==============================================================
 #
+rtemsutils-R1-0-0-lcls5:  New build mechanism that uses RELEASE_SITE more.
+
 rtemsutils-R1-0-0-lcls4:  Built against rtems 4.9.4 and EPICS BASE:
                           base-R3-14-8-2-lcls6
 
